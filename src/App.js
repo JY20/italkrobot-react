@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Menu from "./menufile/menu";
+import Events from "./eventsfile/events";
+import Projects from "./projectsfile/projects";
+import D from "./contactfile/dd";
+import Home from "./homefile/home";
+import Products from "./productsfile/products";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      height: 512,
+      Homevis: true,
+      Eventsvis: true,
+      Projectsvis: true,
+      Productsvis: true,
+      Contactusvis: true,
+    };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(
+      "resize",
+      this.updateWindowDimensions.bind(this)
+    );
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <p>
+            <Menu height={this.state.height} width={this.state.width} />
+            {this.state.Eventsvis ? <Events width={this.state.width} /> : null}
+          </p>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
