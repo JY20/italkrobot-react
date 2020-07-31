@@ -7,17 +7,15 @@ import Projects from "./projectsfile/projects";
 import D from "./contactfile/dd";
 import Home from "./homefile/home";
 import Products from "./productsfile/products";
+import { Link, Router, BrowserRouter, Route, Switch } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       height: 512,
-      Homevis: true,
       Eventsvis: true,
-      Projectsvis: true,
-      Productsvis: true,
-      Contactusvis: true,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -44,7 +42,6 @@ class App extends React.Component {
         <header className="App-header">
           <p>
             <Menu height={this.state.height} width={this.state.width} />
-            {this.state.Eventsvis ? <Events width={this.state.width} /> : null}
           </p>
         </header>
       </div>
