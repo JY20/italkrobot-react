@@ -34,7 +34,7 @@ class Menu extends React.Component {
               <ButtonMenu label="Contact Us" height={this.props.height} />
             </Link>
             <Link to="/products">
-              <ButtonMenu label="products" height={this.props.height} />
+              <ButtonMenu label="Products" height={this.props.height} />
             </Link>
             <Link to="/projects">
               <ButtonMenu label="Projects" height={this.props.height} />
