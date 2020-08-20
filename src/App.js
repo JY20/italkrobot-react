@@ -4,7 +4,7 @@ import "./App.css";
 import Menu from "./menufile/menu";
 import Events from "./eventsfile/events";
 import Projects from "./projectsfile/projects";
-import D from "./contactfile/dd";
+import Contact from "./contactfile/contact";
 import Home from "./homefile/home";
 import Products from "./productsfile/products";
 import { Link, Router, BrowserRouter, Route, Switch } from "react-router-dom";

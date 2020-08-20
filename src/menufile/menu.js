@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import Logo from "c:/Users/Jimmy/italkrobot-react/src/images/Logo.png";
 import ButtonMenu from "./buttonmenu";
-import { Link, Router, BrowserRouter, Route, Switch } from "react-router-dom";
+import {
+  Link,
+  Router,
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Events from "../eventsfile/events";
 import Home from "../homefile/home";
 import Products from "../productsfile/products";
 import Projects from "../projectsfile/projects";
-import D from "../contactfile/dd";
+import Contact from "../contactfile/contact";
 
 class Menu extends React.Component {
   render() {
@@ -47,6 +54,9 @@ class Menu extends React.Component {
             </Link>
           </section>
           <Switch>
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
             <Route path="/home">
               <Home width={this.props.width} />
             </Route>
@@ -60,7 +70,7 @@ class Menu extends React.Component {
               <Products width={this.props.width} />
             </Route>
             <Route path="/contactus">
-              <D width={this.props.width} />
+              <Contact width={this.props.width} />
             </Route>
           </Switch>
         </BrowserRouter>

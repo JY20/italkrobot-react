@@ -1,6 +1,6 @@
 import React from "react";
 
-class D extends React.Component {
+class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: "" };
@@ -13,6 +13,11 @@ class D extends React.Component {
   render() {
     return (
       <div>
+        <section style={{ width: this.props.width }}>
+          <button>
+            <img src="../images/icons/facebook.png" onClick={this.myfunction} />
+          </button>
+        </section>
         <form>
           <header style={{ fontSize: this.props.width / 10 }}>
             Contact Us
@@ -23,11 +28,10 @@ class D extends React.Component {
           />
           <p>{this.state.value}</p>
           <br />
-          <button></button>
         </form>
       </div>
     );
   }
 }
 
-export default D;
+export default Contact;
