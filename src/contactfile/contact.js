@@ -1,6 +1,8 @@
 import React from "react";
-import Logo from "../images/icons/facebook.png";
-import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
+import FB from "../images/icons/facebook.png";
+import IG from "../images/icons/instagram.png";
+import TW from "../images/icons/twitter.png";
+import FollowUs from "./followus";
 
 class Contact extends React.Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class Contact extends React.Component {
         "https://www.instagram.com/italkrobot/",
         "https://twitter.com/italkrobot",
       ],
-      icons: [Logo],
+      icons: [FB, IG, TW],
     };
   }
 
@@ -21,6 +23,18 @@ class Contact extends React.Component {
   }
 
   render() {
+    const items = [];
+
+    for (var i = 0; i < this.state.links.length; i++) {
+      items.push(
+        <FollowUs
+          width={this.props.width}
+          icon={this.state.icons[i]}
+          link={this.state.links[i]}
+        />
+      );
+    }
+
     return (
       <div>
         <form>
@@ -35,16 +49,24 @@ class Contact extends React.Component {
           <br />
         </form>
         <section>
-          <header style={{ float: "left", fontSize: this.props.width / 60 }}>
-            Follow Us
+          <header
+            style={{
+              float: "left",
+              fontSize: this.props.width / 30,
+            }}
+          >
+            Follow Us:
           </header>
-          <br />
-          <a href={this.state.links[0]}>
-            <img
-              style={{ width: this.props.width / 30, float: "left" }}
-              src={this.state.icons[0]}
-            />
+          {items}
+          <a
+            href={"mailto: italkrobot@live.com"}
+            style={{ float: "right", fontSize: this.props.width / 30 }}
+          >
+            italkrobot@live.com
           </a>
+          <header style={{ float: "right", fontSize: this.props.width / 30 }}>
+            Email Us:
+          </header>
         </section>
       </div>
     );
