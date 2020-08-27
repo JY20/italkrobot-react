@@ -17,6 +17,7 @@ class FollowUs extends React.Component {
           style={{
             width: this.props.width / 30,
             paddingTop: this.props.width / 100,
+            paddingLeft: this.props.width / 100,
           }}
           src={this.props.icon}
         />

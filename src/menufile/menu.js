@@ -25,32 +25,52 @@ class Menu extends React.Component {
             style={{
               backgroundColor: "#252525",
               width: this.props.width * 0.98,
-              height: this.props.height / 6,
+              height: this.props.width / 12,
             }}
           >
             <img
               style={{
-                height: this.props.height / 7,
+                height: this.props.width / 14,
                 float: "left",
-                paddingTop: (this.props.height / 6 - this.props.height / 7) / 2,
+                paddingTop: (this.props.width / 12 - this.props.width / 14) / 2,
                 paddingLeft: this.props.width / 50,
               }}
               src={Logo}
             />
             <Link to="/contactus">
-              <ButtonMenu label="Contact Us" height={this.props.height} />
+              <ButtonMenu
+                label="Contact Us"
+                height={this.props.height}
+                width={this.props.width}
+              />
             </Link>
             <Link to="/products">
-              <ButtonMenu label="Products" height={this.props.height} />
+              <ButtonMenu
+                label="Products"
+                height={this.props.height}
+                width={this.props.width}
+              />
             </Link>
             <Link to="/projects">
-              <ButtonMenu label="Projects" height={this.props.height} />
+              <ButtonMenu
+                label="Projects"
+                height={this.props.height}
+                width={this.props.width}
+              />
             </Link>
             <Link to="/events">
-              <ButtonMenu label="Events" height={this.props.height} />
+              <ButtonMenu
+                label="Events"
+                height={this.props.height}
+                width={this.props.width}
+              />
             </Link>
             <Link to="/home">
-              <ButtonMenu label="Home" height={this.props.height} />
+              <ButtonMenu
+                label="Home"
+                height={this.props.height}
+                width={this.props.width}
+              />
             </Link>
           </section>
           <Switch>

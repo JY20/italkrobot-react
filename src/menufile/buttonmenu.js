@@ -10,12 +10,12 @@ export default class ButtonMenu extends React.Component {
         renderAs="button"
         style={{
           backgroundColor: "Transparent",
-          height: this.props.height / 6,
+          height: this.props.width / 12,
           float: "right",
-          padding: this.props.height / 20,
+          padding: this.props.width / 40,
           border: "none",
           color: "white",
-          fontSize: this.props.height / 30,
+          fontSize: this.props.width / 60,
         }}
       >
         <span>{this.props.label}</span>

@@ -42,6 +42,9 @@ class App extends React.Component {
         <header className="App-header">
           <p>
             <Menu height={this.state.height} width={this.state.width} />
+            {this.state.width}
+            <br />
+            {this.state.height}
           </p>
         </header>
       </div>
