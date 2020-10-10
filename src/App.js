@@ -10,6 +10,7 @@ import Products from "./productsfile/products";
 import { Link, Router, BrowserRouter, Route, Switch } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import MyImage from "./images/FFF.jpg";
+import Bottom from "./menufile/bottom";
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
     this.state = {
       height: 512,
       Eventsvis: true,
+      inputs: "",
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -42,9 +44,8 @@ class App extends React.Component {
         <header className="App-header">
           <p>
             <Menu height={this.state.height} width={this.state.width} />
-            {this.state.width}
             <br />
-            {this.state.height}
+            <Bottom height={this.state.height} width={this.state.width} />
           </p>
         </header>
       </div>

@@ -38,59 +38,40 @@ class Menu extends React.Component {
               src={Logo}
             />
             <Link to="/contactus">
-              <ButtonMenu
-                label="Contact Us"
-                height={this.props.height}
-                width={this.props.width}
-              />
+              <ButtonMenu label="Contact Us" width={this.props.width} />
             </Link>
             <Link to="/products">
-              <ButtonMenu
-                label="Products"
-                height={this.props.height}
-                width={this.props.width}
-              />
+              <ButtonMenu label="Products" width={this.props.width} />
             </Link>
             <Link to="/projects">
-              <ButtonMenu
-                label="Projects"
-                height={this.props.height}
-                width={this.props.width}
-              />
+              <ButtonMenu label="Projects" width={this.props.width} />
             </Link>
             <Link to="/events">
-              <ButtonMenu
-                label="Events"
-                height={this.props.height}
-                width={this.props.width}
-              />
+              <ButtonMenu label="Events" width={this.props.width} />
             </Link>
             <Link to="/home">
-              <ButtonMenu
-                label="Home"
-                height={this.props.height}
-                width={this.props.width}
-              />
+              <ButtonMenu label="Home" width={this.props.width} />
             </Link>
           </section>
+          <br />
           <Switch>
             <Route exact path="/">
               <Redirect to="/home" />
             </Route>
             <Route path="/home">
-              <Home width={this.props.width} />
+              <Home width={this.props.width} height={this.props.height} />
             </Route>
             <Route path="/events">
-              <Events width={this.props.width} />
+              <Events width={this.props.width} height={this.props.height} />
             </Route>
             <Route path="/projects">
-              <Projects width={this.props.width} />
+              <Projects width={this.props.width} height={this.props.height} />
             </Route>
             <Route path="/products">
-              <Products width={this.props.width} />
+              <Products width={this.props.width} height={this.props.height} />
             </Route>
             <Route path="/contactus">
-              <Contact width={this.props.width} />
+              <Contact width={this.props.width} height={this.props.height} />
             </Route>
           </Switch>
         </BrowserRouter>

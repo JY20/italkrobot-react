@@ -4,8 +4,12 @@ import RecentImage from "../images/FFF.jpg";
 class Home extends React.Component {
   render() {
     return (
-      <section>
-        <br />
+      <div
+        style={{
+          border: "5px solid black",
+          height: (this.props.width * 2) / 6,
+        }}
+      >
         <img
           src={RecentImage}
           style={{ width: (this.props.width * 2) / 3, float: "left" }}
@@ -20,7 +24,7 @@ class Home extends React.Component {
         >
           DONATE NOW
         </a>
-      </section>
+      </div>
     );
   }
 }
