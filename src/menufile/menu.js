@@ -41,7 +41,7 @@ class Menu extends React.Component {
               <ButtonMenu label="Contact Us" width={this.props.width} />
             </Link>
             <Link to="/products">
-              <ButtonMenu label="Products" width={this.props.width} />
+              <ButtonMenu label="Services" width={this.props.width} />
             </Link>
             <Link to="/projects">
               <ButtonMenu label="Projects" width={this.props.width} />

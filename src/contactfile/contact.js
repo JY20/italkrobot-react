@@ -36,18 +36,11 @@ class Contact extends React.Component {
     }
 
     return (
-      <div>
-        <form>
+      <div style={{ height: this.props.width/5}}>
           <header style={{ fontSize: this.props.width / 10 }}>
             Contact Us
           </header>
-          <input
-            value={this.state.value}
-            onChange={this.handleChange.bind(this)}
-          />
           <p>{this.state.value}</p>
-          <br />
-        </form>
         <section>
           <header
             style={{

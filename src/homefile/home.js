@@ -6,8 +6,8 @@ class Home extends React.Component {
     return (
       <div
         style={{
-          border: "5px solid black",
           height: (this.props.width * 2) / 6,
+          border: "5px solid transparent"
         }}
       >
         <img
