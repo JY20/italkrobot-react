@@ -4,11 +4,12 @@ export default class sect extends React.Component {
   render() {
     return (
       <section style= {{height: (this.props.width * 2) / 9,
-        border: "5px solid black", 
-        backgroundColor: "light grey"}}>
+        // border: "5px solid black", 
+        // backgroundImage: `url(${this.props.image})`
+        }}>
         <img
           style={{
-            width: this.props.width / 3,
+            height: (this.props.width * 2) / 9,
             float: "left"
           }}
           src={this.props.image}

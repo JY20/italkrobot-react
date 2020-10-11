@@ -2,14 +2,6 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Menu from "./menufile/menu";
-import Events from "./eventsfile/events";
-import Projects from "./projectsfile/projects";
-import Contact from "./contactfile/contact";
-import Home from "./homefile/home";
-import Products from "./productsfile/products";
-import { Link, Router, BrowserRouter, Route, Switch } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import MyImage from "./images/FFF.jpg";
 import Bottom from "./menufile/bottom";
 
 class App extends React.Component {

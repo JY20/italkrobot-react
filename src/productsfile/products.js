@@ -17,7 +17,7 @@ class Products extends React.Component {
           description={"......."}
           width={this.props.width}
         /> */}
-        <Sect width={this.props.width} image={electronic} description="repair"/>
+        <Sect width={this.props.width} image={electronic} description="repair" side="left"/>
       </div>
     );
   }
